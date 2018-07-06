@@ -4,7 +4,7 @@ import (
 
 	//jwt "github.com/dgrijalva/jwt-go"
 	//"github.com/dgrijalva/jwt-go/request"
-	//"github.com/gin-contrib/cors"
+	"github.com/gin-contrib/cors"
 
 	"./controllers"
 
@@ -15,6 +15,9 @@ var secretKey = "75c92a074c341e9964329c0550c2673730ed8479c885c43122c90a2843177d5
 
 func main() {
 	router := gin.Default()
+	config := cors.DefaultConfig()
+	config.AllowOrigins = []string{"http://localhost:8080"}
+	router.Use(cors.New(config))
 	router.POST("/auth", auth_controller.SignIn)
 
 	router.Run(":8000")
