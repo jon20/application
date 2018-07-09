@@ -1,8 +1,8 @@
 <template>
-  <div class="top">
+  <div class="Home">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Sample Line</a>
+      <a href="#" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       </ul>
     </div>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Top',
+  name: 'Home',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
